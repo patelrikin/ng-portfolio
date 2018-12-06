@@ -1,1 +1,237 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+
+.bg-primary {
+  background-color: #f05f40;
+}
+
+body,html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  // background: #22262a;
+  font-family: Helvetica Neue,arial,sans-serif;
+  font-weight: 400;
+  // color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+#app {
+  height: 100%
+}
+
+:host { display: contents; }
+
+.footer a,.sidebar a {
+  // color: #fff
+}
+
+.content {
+  background-color: #fefefe;
+  color: #444;
+  padding: 2em .65em
+}
+
+.flash-text {
+  background: #4c4
+}
+
+ul {
+  padding: 0
+}
+
+ul li {
+  padding: .4em;
+  font-weight: 600
+}
+
+@supports (display: grid) {
+  @media (min-width:760px) {
+      .wrapper {
+          display:grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-areas:
+            "sidebar content content content"
+            "sidebar content content content"
+            "....... content content content"
+            "....... content content content";
+          grid-auto-rows: 1fr
+      }
+
+      .content {
+          grid-area: content;
+          position: relative;
+          overflow: scroll
+      }
+
+      .sidebar {
+          grid-area: sidebar;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          padding: .65em
+      }
+
+      .header ul:before {
+          content: "";
+          margin-top: 1em;
+          max-width: 50px;
+          border-top: 1px solid #f05f40;
+          border-width: 3px
+      }
+
+      .footer ul,.header ul {
+          margin: 0;
+          display: flex;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          list-style: none;
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center
+      }
+
+      .footer {
+          grid-area: footer;
+          bottom: 0;
+          padding: .35em
+      }
+
+      .footer, .sidebar {
+          // position: fixed;
+          // width: 25%
+      }
+
+      .portfolio.flex-container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+          justify-content: space-evenly
+      }
+
+      .flex-container .flex-content {
+          height: 6.6875em;
+          width: 10.3125em;
+          margin: 1em;
+          position: relative;
+          -webkit-animation-name: zoomIn;
+          animation-name: zoomIn
+      }
+
+      .flex-container .flex-content:hover {
+          -webkit-transition: all .35s;
+          transition: all .35s
+      }
+
+      .flex-container .flex-content:before {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: block;
+          content: "";
+          opacity: 0;
+          background-color: rgba(235,56,18,.8);
+          cursor: pointer
+      }
+
+      .client-name {
+          color: #fff;
+          margin: 0 auto;
+          font: 700 1.2em arial,sans-serif;
+          position: absolute;
+          text-align: center;
+          text-shadow: .1em .1em 1em #000;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          opacity: 0;
+          width: 100%;
+          z-index: 1
+      }
+
+      .flex-container .flex-content:hover .client-name {
+          opacity: 1;
+          -webkit-transition: all .15s;
+          transition: all .15s
+      }
+
+      .flex-container .flex-content:hover:before {
+          opacity: 1;
+          -webkit-transition: all .35s;
+          transition: all .35s
+      }
+
+      .flex-container img {
+          height: 100%;
+          width: 100%
+      }
+
+      .profile {
+          margin: 0 auto;
+          max-width: 700px;
+          text-align: left
+      }
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3,.3,.3);
+      transform: scale3d(.3,.3,.3)
+  }
+
+  50% {
+      opacity: 1
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+      opacity: 0;
+      -webkit-transform: scale3d(.3,.3,.3);
+      transform: scale3d(.3,.3,.3)
+  }
+
+  50% {
+      opacity: 1
+  }
+}
+
+.home__MseGd {
+  padding: 56px 20px;
+  min-height: 100%;
+  width: 100%
+}
+
+.home__3xWYd {
+  padding: 56px 20px;
+  min-height: 100%;
+  width: 100%
+}
