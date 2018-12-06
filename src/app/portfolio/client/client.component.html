@@ -1,0 +1,13 @@
+<section>
+  <h2>{{client.name}}</h2>
+  <h3>{{ client.description }}</h3>
+  <div class="portfolio flex-container">
+    <div class="flex-content">
+      <a href="{{ client.clientURL }}" >
+        <img src="//preact.patelrikin.com/assets/img/portfolio/{{ client.image }}" alt="{{ client.name }}" />
+        <div class="client-name">{{ client.name }}</div>
+      </a>
+    </div>
+  </div>
+  <a [routerLink]="['/portfolio']">Back</a>
+</section>

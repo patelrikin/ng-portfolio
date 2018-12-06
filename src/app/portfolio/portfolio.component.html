@@ -1,0 +1,29 @@
+<section id="portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Client Portfolio</h2>
+        <p>
+          Following are the sub-set of clients that I have worked for directly
+          or indirectly on several small (100's of hours) to large (1000's of
+          hours) sized projects. Ask for more details about individual client
+          project.
+        </p>
+        <hr class="primary" />
+      </div>
+    </div>
+  </div>
+  <section>
+    <h2>Client Portfolio</h2>
+    <div class="portfolio flex-container">
+      <div class="flex-content" *ngFor="let client of clients; index as i;">
+        <a href="{{ client.clientURL }}" [routerLink]="['/client/', i]" >
+          <img src="//preact.patelrikin.com/assets/img/portfolio/{{ client.image }}" alt="{{ client.name }}" />
+          <div class="client-name">{{ client.name }}</div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <app-client></app-client>
+  <!-- /.container -->
+</section>
