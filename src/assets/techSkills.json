@@ -1,0 +1,18 @@
+[
+  {
+    "skillName": "Front-end",
+    "skillItems": ["HTML5", "CSS3", "Javascript", "HTML4", "CSS2.1", "PHP", "Java", "JSP", "ASP", "VB6", "JSON", "AJAX"]
+  },
+  {
+    "skillName": "Frameworks & CMS",
+    "skillItems": ["ReactJS", "AngularJS", "jQuery", "Prototype", "Dojo", "YUI", "Bootstrap", "Wordpress", "Drupal", "Joomla", "Custom Proprietary (RemoteTools)"]
+  },
+  {
+    "skillName": "Databases",
+    "skillItems": ["SQL", "MySQL", "MongoDB", "Oracle", "MS SQL/Access", "MS Access"]
+  },
+  {
+    "skillName": "Other Skills",
+    "skillItems": ["Object Oriented Programming", "Responsive Web Development", "Team Leadership", "Resource Management", "Mentoring."]
+  }
+]

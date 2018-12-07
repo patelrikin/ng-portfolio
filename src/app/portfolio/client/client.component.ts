@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from '../../data.service';
 
@@ -17,7 +17,7 @@ export class ClientComponent implements OnInit {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.client = this.ds.getClient(id);
+    this.ds.getClient(id).subscribe(client => this.client = client);
   }
 
 }

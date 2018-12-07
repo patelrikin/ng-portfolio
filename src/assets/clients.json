@@ -1,4 +1,4 @@
-export default {
+{
   "image_base": "/img/portfolio/",
   "clients": [
     {

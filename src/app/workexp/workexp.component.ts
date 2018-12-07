@@ -14,7 +14,7 @@ export class WorkexpComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.workexp = this.ds.getWorkExperience();
+    this.ds.getWorkExperience().subscribe(data => this.workexp = data);
   }
 
 }

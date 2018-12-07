@@ -16,10 +16,10 @@ export class TechskillsComponent implements OnInit {
   constructor(private ds: DataService) { }
 
   ngOnInit() {
-    this.frontend = this.ds.getTechSkills('frontend');
-    this.framework = this.ds.getTechSkills('framework');
-    this.databases = this.ds.getTechSkills('databases');
-    this.other = this.ds.getTechSkills('other');
+    this.ds.getTechSkill('front-end').subscribe(data => this.frontend = data.skillItems);
+    this.ds.getTechSkill('framework').subscribe(data => this.framework = data.skillItems);
+    this.ds.getTechSkill('databases').subscribe(data => this.databases = data.skillItems);
+    this.ds.getTechSkill('other').subscribe(data => this.other = data.skillItems);
   }
 
 }
