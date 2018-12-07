@@ -7,19 +7,20 @@ import { AboutModule } from './about/about.module';
 import { ContactModule } from './contact/contact.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
 import { TechskillsModule } from './techskills/techskills.module';
+import { WorkexpModule } from './workexp/workexp.module';
+
+import { DataService } from './data.service';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { DataService } from './data.service';
 import { FooterComponent } from './footer/footer.component';
-import { WorkexpComponent } from './workexp/workexp.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent,
-    WorkexpComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +28,7 @@ import { WorkexpComponent } from './workexp/workexp.component';
     ContactModule,
     PortfolioModule,
     TechskillsModule,
+    WorkexpModule,
     AppRoutingModule,
     FormsModule
   ],
