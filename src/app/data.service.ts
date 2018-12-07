@@ -16,14 +16,14 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getClients(): Observable<Object> {
-    return this.http.get<Object>('assets/clients.json')
+  getClients(): Observable<any> {
+    return this.http.get<object>('assets/clients.json')
       .pipe(
           catchError(this.handleError)
       );
   }
 
-  getClient(id): Observable<Object> {
+  getClient(id): Observable<any> {
     return this.getClients()
       .pipe(
           map(clientData => {
@@ -34,7 +34,7 @@ export class DataService {
   }
 
   getTechSkills() {
-    return this.http.get<Array<Object>>('assets/techSkills.json')
+    return this.http.get<Array<any>>('assets/techSkills.json')
       .pipe(
         catchError(this.handleError)
       );
@@ -53,8 +53,8 @@ export class DataService {
     // return this.techSkill[skillName] || [];
   }
 
-  getWorkExperience(): Observable<Object> {
-    return this.http.get<Array<Object>>('assets/workExp.json')
+  getWorkExperience(): Observable<any> {
+    return this.http.get<Array<any>>('assets/workExp.json')
     .pipe(
       catchError(this.handleError)
     );
