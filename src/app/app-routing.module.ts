@@ -7,7 +7,6 @@ import { WorkexpComponent } from './workexp/workexp.component';
 
 const routes: Routes = [
   { path: 'about/:id', component: AboutComponent }, // TODO: remove route params experiment
-  { path: 'workexp', component: WorkexpComponent },
   { path: '', pathMatch: 'full', redirectTo: '/profile' },
   { path: '**', pathMatch: 'full', redirectTo: '/profile' } // Catch all
 ];
