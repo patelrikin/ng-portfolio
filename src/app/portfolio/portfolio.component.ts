@@ -14,7 +14,7 @@ export class PortfolioComponent implements OnInit {
   constructor(private ds: DataService) { }
 
   ngOnInit() {
-    this.clients = this.ds.getClients().clients;
+    this.clients = this.ds.getClients().clients; // TODO: subscribe to get call completion
   }
 
 }
