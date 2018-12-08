@@ -8,10 +8,10 @@ import { DataService } from '../data.service';
 })
 export class TechskillsComponent implements OnInit {
 
-  frontend: Array<string>;
-  framework: Array<string>;
-  databases: Array<string>;
-  other: Array<string>;
+  frontend: Array<string> = [];
+  framework: Array<string> = [];
+  databases: Array<string> = [];
+  other: Array<string> = [];
 
   constructor(private ds: DataService) { }
 

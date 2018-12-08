@@ -1,19 +1,39 @@
 <section>
   <h2>Technical Skills</h2>
-  <div>
-    <h3>Front-end</h3>
-    <p>{{ frontend.join(", ") }}</p>
-  </div>
-  <div>
-    <h3>Frameworks &amp; CMS</h3>
-    <p>{{ framework.join(", ") }}</p>
-  </div>
-  <div>
-    <h3>Databases</h3>
-    <p>{{ databases.join(", ") }}</p>
-  </div>
-  <div>
-    <h3>Other Skills</h3>
-    <p>{{ other.join(", ") }}</p>
-  </div>
+  <mat-card class="m20">
+    <mat-card-header>
+      <mat-card-title>Front-end</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ frontend.join(", ") }}
+      <mat-progress-bar *ngIf="frontend.length === 0" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="m20">
+    <mat-card-header>
+      <mat-card-title>Frameworks &amp; CMS</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ framework.join(", ") }}
+      <mat-progress-bar *ngIf="framework.length === 0" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="m20">
+    <mat-card-header>
+      <mat-card-title>Databases</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ databases.join(", ") }}
+      <mat-progress-bar *ngIf="databases.length === 0" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="m20">
+    <mat-card-header>
+      <mat-card-title>Other Skills</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ other.join(", ") }}
+      <mat-progress-bar *ngIf="other.length === 0" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
 </section>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
@@ -11,6 +12,7 @@ import { TechskillsModule } from './techskills/techskills.module';
 import { WorkexpModule } from './workexp/workexp.module';
 
 import { DataService } from './data.service';
+// import DemoMaterialModule from './material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -32,7 +34,8 @@ import { FooterComponent } from './footer/footer.component';
     WorkexpModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [
     DataService
@@ -42,3 +45,5 @@ import { FooterComponent } from './footer/footer.component';
   ]
 })
 export class AppModule { }
+
+// console.log(DemoMaterialModule)

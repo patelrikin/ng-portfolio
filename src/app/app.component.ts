@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-portfolio';
+  title = 'Rikin Patel ng-portfolio Angular 7 based app';
 }
