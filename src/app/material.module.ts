@@ -84,7 +84,7 @@ import {
     ScrollingModule,
   ]
 })
-export default class {}
+export class MaterialUIModule {}
 
 
 /**  Copyright 2018 Google Inc. All Rights Reserved.
