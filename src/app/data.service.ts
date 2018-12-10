@@ -1,11 +1,9 @@
-import { Injectable, ViewChild } from '@angular/core';
+import { Injectable } from '@angular/core';
 // import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs/Observable';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-
-// import clientJson from '../assets/clients.js';
+import { IClient } from './portfolio/client/client.component';
 
 @Injectable({
   providedIn: 'root'
@@ -17,17 +15,17 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   getClients(): Observable<any> {
-    return this.http.get<object>('assets/clients.json')
+    return this.http.get('assets/clients.json')
       .pipe(
           catchError(this.handleError)
       );
   }
 
-  getClient(id): Observable<any> {
+  getClient(id): Observable<IClient> {
     return this.getClients()
       .pipe(
           map(clientData => {
-            return clientData.clients[id];
+            return <IClient>clientData.clients[id];
           }),
           catchError(this.handleError)
       );
@@ -50,7 +48,6 @@ export class DataService {
           }),
           catchError(this.handleError)
       );
-    // return this.techSkill[skillName] || [];
   }
 
   getWorkExperience(): Observable<any> {
