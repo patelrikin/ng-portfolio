@@ -2,13 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from '../../data.service';
+// import { SharedModule } from '../../shared.module';
 
-export interface IClient {
-  name: string;
-  description: string;
-  clientURL: string;
-  image: string;
-}
+import { IClient } from '../../../models/client.model';
 
 @Component({
   selector: 'app-client',

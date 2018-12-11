@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WorkexpComponent } from './workexp.component';
 
 const routes: Routes = [
-    { path: 'workexp', component: WorkexpComponent },
+    { path: '', component: WorkexpComponent },
 ];
 
 @NgModule({

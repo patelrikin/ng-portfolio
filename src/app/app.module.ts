@@ -6,12 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
-import { ContactModule } from './contact/contact.module';
+// import { ContactModule } from './contact/contact.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
-import { TechskillsModule } from './techskills/techskills.module';
-import { WorkexpModule } from './workexp/workexp.module';
+// import { TechskillsModule } from './techskills/techskills.module';
+// import { WorkexpModule } from './workexp/workexp.module';
 
-import { DataService } from './data.service';
+// import { DataService } from './data.service';
+import { SharedModule } from './shared.module';
 // import DemoMaterialModule from './material.module';
 
 import { AppComponent } from './app.component';
@@ -28,18 +29,19 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AboutModule,
-    ContactModule,
+    // ContactModule,
     PortfolioModule,
-    TechskillsModule,
-    WorkexpModule,
+    // TechskillsModule,
+    // WorkexpModule,
+    SharedModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [
+  /* providers: [
     DataService
-  ],
+  ], */
   bootstrap: [
     AppComponent
   ]

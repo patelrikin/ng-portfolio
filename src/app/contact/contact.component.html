@@ -1,12 +1,12 @@
 <section id="contact">
   <div class="container">
       <div class="row">
-        <form>
-          <input type="text" class="txt" name="item" placeholder="Email" [(ngModel)]="email">
+        <form #emailForm="ngForm" (ngSubmit)="processEmail(emailForm)">
+          <input type="text" class="txt" name="email" placeholder="Email" [(ngModel)]="email">
           <input type="submit" class="btn" [value]="btnText">
         </form>
-        <div class="form-submit">
-          Email: {{email}} Email HERE TBD
+        <div class="form-submit m20">
+          Submitted Email value: {{emailForm.submitted ? email : null}}
         </div>
       </div>
       <div class="row">
