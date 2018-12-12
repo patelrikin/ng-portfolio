@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 
+interface IExperience {
+  title: string;
+  location: string;
+  term: string;
+}
+
 @Component({
   selector: 'app-workexp',
   templateUrl: './workexp.component.html',
@@ -8,7 +14,7 @@ import { DataService } from '../data.service';
 })
 export class WorkexpComponent implements OnInit {
 
-  workexp: Array<object>;
+  workexp: IExperience[];
 
   constructor(private ds: DataService) {
   }

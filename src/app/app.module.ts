@@ -13,7 +13,7 @@ import { PortfolioModule } from './portfolio/portfolio.module';
 
 // import { DataService } from './data.service';
 import { SharedModule } from './shared.module';
-// import DemoMaterialModule from './material.module';
+import { MaterialUIModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -34,6 +34,7 @@ import { FooterComponent } from './footer/footer.component';
     // TechskillsModule,
     // WorkexpModule,
     SharedModule.forRoot(),
+    MaterialUIModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
@@ -47,5 +48,3 @@ import { FooterComponent } from './footer/footer.component';
   ]
 })
 export class AppModule { }
-
-// console.log(DemoMaterialModule)

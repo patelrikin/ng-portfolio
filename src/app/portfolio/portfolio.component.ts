@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 import { DataService } from '../data.service';
 
@@ -14,7 +14,9 @@ export class PortfolioComponent implements OnInit {
   constructor(private ds: DataService) { }
 
   ngOnInit() {
-    this.ds.getClients().subscribe(clientData => this.clients = clientData.clients);
+    this.ds.getClients().subscribe(
+      clientData => this.clients = clientData.clients
+    );
   }
 
 }

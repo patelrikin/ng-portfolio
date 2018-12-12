@@ -1,6 +1,7 @@
-<section>
-  <h2>Work Experience</h2>
-  <p>
+<mat-card>
+    <mat-card-title class="text-center">Work Experience</mat-card-title>
+    <hr class="light">
+
     <mat-spinner *ngIf="!workexp"></mat-spinner>
 
     <mat-card *ngFor="let exp of workexp" class="m20">
@@ -10,5 +11,4 @@
         <mat-card-subtitle>{{ exp.term }}</mat-card-subtitle>
       </mat-card-header>
     </mat-card>
-  </p>
-</section>
+</mat-card>

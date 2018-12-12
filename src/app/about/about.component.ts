@@ -17,8 +17,8 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
   }
 
+  // TODO: remove
   sendMeContact() {
     this.router.navigate(['contact']);
   }
-
 }

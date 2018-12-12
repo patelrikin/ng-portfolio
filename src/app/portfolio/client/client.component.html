@@ -1,13 +1,14 @@
-<section *ngIf="client">
-  <h2>{{ client.name }}</h2>
-  <h3>{{ client.description }}</h3>
-  <div class="portfolio flex-container">
-    <div class="flex-content">
-      <a href="{{ client.clientURL }}" >
-        <img src="//preact.patelrikin.com/assets/img/portfolio/{{ client.image }}" alt="{{ client.name }}" />
-        <div class="client-name">{{ client.name }}</div>
-      </a>
-    </div>
+<mat-card *ngIf="client" class="client">
+  <div class="client-header">
+    <a href="{{ client.clientURL }}" class="client-image">
+      <mat-card-title>{{ client.name }}</mat-card-title>
+      <img src="//preact.patelrikin.com/assets/img/portfolio/{{ client.image }}" alt="{{ client.name }}" />
+    </a>
   </div>
-  <a [routerLink]="['/portfolio']">Back</a>
-</section>
+  <div class="client-content">
+    <p>{{ client.description }}</p>
+  </div>
+  <div class="client-footer text-center">
+    <a mat-button [routerLink]="['/portfolio']">Back</a>
+  </div>
+</mat-card>
