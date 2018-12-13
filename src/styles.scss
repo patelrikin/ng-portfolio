@@ -36,12 +36,13 @@ body,html {
 
 :host { display: contents; }
 
-.content {
+.content, .mat-card-content {
   // background-color: #fefefe;
   // color: #444;
-  padding: 2em .65em;
+  padding: .65em 2em;
   font-size: 15px;
   line-height: 26px;
+  color: #4D6172;
 }
 
 ul {
@@ -55,6 +56,16 @@ ul li {
 
 .text-center {
   text-align: center;
+}
+
+.sidebar, .footer {
+  // background: #561296;
+  background: #203140;
+  color: #fff;
+}
+
+.container {
+  min-height: 500px;
 }
 
 @supports (display: grid) {
