@@ -22,7 +22,7 @@ export class ClientComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.ds.getClient(id).subscribe(client => {
+    this.clientSubscription = this.ds.getClient(id).subscribe(client => {
       this.client = client;
     });
   }
