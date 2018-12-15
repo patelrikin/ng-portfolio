@@ -68,6 +68,10 @@ ul li {
   min-height: 500px;
 }
 
+.fw5 {
+  font-weight: 500;
+}
+
 @supports (display: grid) {
   @media (min-width:760px) {
       .wrapper {

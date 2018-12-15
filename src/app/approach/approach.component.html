@@ -1,0 +1,16 @@
+<mat-card-title>App Architecture / Development Approach</mat-card-title>
+<mat-card>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item>Modules: Each app route is divided into its own submodule and lazy loaded upon route activation.</mat-list-item>
+      <mat-list-item>Each module have their own routing module which are imported into respective module.</mat-list-item>
+      <mat-list-item>Module is then exported out and imported into main App module to wire up all togather.</mat-list-item>
+      <mat-list-item>Main App module's routing module handles all route paths and lazy load child declaration.</mat-list-item>
+      <mat-list-item>Service: Data-service is imported into submodules that need it.</mat-list-item>
+      <mat-list-item>In order to have singleton shared service, data-service is wrapped inside shared.module.ts and is imported using .forRoot() in app.module.ts rather than provided.</mat-list-item>
+      <mat-list-item>Middleware: Uses static hardcoded .json files on server which data service makes call to.</mat-list-item>
+      <mat-list-item>UI: Uses Angular Material UI and component's own styling in their individual scss files.</mat-list-item>
+      <mat-list-item>Most of the boilerplate code was generated using Angular CLI.</mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

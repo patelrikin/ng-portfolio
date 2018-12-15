@@ -1,13 +1,13 @@
 <mat-card>
   <a *ngIf="id" (click)="sendMeContact()">Go to Contact</a>
   <mat-card-title class="text-center">Profile</mat-card-title>
-  <hr class="light">
+  <mat-divider class="light"></mat-divider>
   <mat-grid-list cols="3" rowHeight="120px">
     <mat-grid-tile colspan="1" rowspan="6">
       <app-linkedin-badge></app-linkedin-badge>
     </mat-grid-tile>
     <mat-grid-tile colspan="2" rowspan="4">
-      <mat-card>
+      <mat-card class="mat-card-flat fw5">
         <mat-card-content>
           <p class="text-faded">Front-End Web Developer with more than 14 years of progressive experience and measurable
             accomplishments in providing technical direction, team and project leadership, and client-facing support for
@@ -30,7 +30,7 @@
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="2" rowspan="2">
-      <mat-card>
+      <mat-card class="mat-card-flat fw5">
         <mat-card-title>
           Key Proficiencies:
         </mat-card-title>

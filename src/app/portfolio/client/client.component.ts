@@ -1,19 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { DataService } from '../../data.service';
 // import { SharedModule } from '../../shared.module';
 
 import { IClient } from '../../../models/client.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-client',
   templateUrl: './client.component.html',
   styleUrls: ['./client.component.scss']
 })
-export class ClientComponent implements OnInit {
+export class ClientComponent implements OnInit, OnDestroy {
 
   client: IClient;
+  clientSubscription: Subscription;
 
   constructor(private ds: DataService,
               private route: ActivatedRoute) { }
@@ -23,5 +25,9 @@ export class ClientComponent implements OnInit {
     this.ds.getClient(id).subscribe(client => {
       this.client = client;
     });
+  }
+
+  ngOnDestroy(): void {
+    this.clientSubscription.unsubscribe();
   }
 }
