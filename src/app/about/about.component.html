@@ -2,11 +2,11 @@
   <a *ngIf="id" (click)="sendMeContact()">Go to Contact</a>
   <mat-card-title class="text-center">Profile</mat-card-title>
   <mat-divider class="light"></mat-divider>
-  <mat-grid-list cols="3" rowHeight="120px">
-    <mat-grid-tile colspan="1" rowspan="6">
+  <div class="about-grid">
+    <div class="linkedin">
       <app-linkedin-badge></app-linkedin-badge>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2" rowspan="4">
+    </div>
+    <div class="profile">
       <mat-card class="mat-card-flat fw5">
         <mat-card-content>
           <p class="text-faded">Front-End Web Developer with more than 14 years of progressive experience and measurable
@@ -28,8 +28,8 @@
             React JS, HTML, CSS, JavaScript, ES6, Jasmine, SASS, lodash, REST Webservices, JSON, Ruby on Rails and Git.</p>
         </mat-card-content>
       </mat-card>
-    </mat-grid-tile>
-    <mat-grid-tile colspan="2" rowspan="2">
+    </div>
+    <div class="keyprof">
       <mat-card class="mat-card-flat fw5">
         <mat-card-title>
           Key Proficiencies:
@@ -38,6 +38,15 @@
           <p class="text-faded">Front End Web Development | Mobile Web Development Full Stack JavaScript Frameworks | Software Development Lifecycle (SDLC) Project Management | Resource Management | Requirements Gathering Cost Estimations | Testing &amp; Debugging | User Interfaces | Documentation Quality Assurance | Content Management Systems | Deployment &amp; Launches Post-Launch Support | Performance Tuning | Cross-Browser Optimization Social Network &amp; Market Research Optimization | Payment Gateway Integration E-Commerce Support | Training | Global Team Leadership</p>
         </mat-card-content>
       </mat-card>
+    </div>
+  </div>
+<!--   <mat-grid-list cols="3" rowHeight="120px">
+    <mat-grid-tile colspan="1" rowspan="6">
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="4">
+    </mat-grid-tile>
+    <mat-grid-tile colspan="2" rowspan="2">
     </mat-grid-tile>
   </mat-grid-list>
+ -->
 </mat-card>

@@ -6,10 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AboutModule } from './about/about.module';
-// import { ContactModule } from './contact/contact.module';
 import { PortfolioModule } from './portfolio/portfolio.module';
-// import { TechskillsModule } from './techskills/techskills.module';
-// import { WorkexpModule } from './workexp/workexp.module';
 
 // import { DataService } from './data.service';
 import { SharedModule } from './shared.module';
@@ -29,10 +26,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AboutModule,
-    // ContactModule,
     PortfolioModule,
-    // TechskillsModule,
-    // WorkexpModule,
     SharedModule.forRoot(),
     MaterialUIModule,
     AppRoutingModule,
