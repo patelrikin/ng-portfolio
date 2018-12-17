@@ -15,13 +15,18 @@ import { MaterialUIModule } from './material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { SecretLinkComponent } from './secret-link/secret-link.component';
+import { PageNotFoundComponent } from './page-not-found.component';
+import { SecretGuardService } from './secret-guard.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    SecretLinkComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,10 @@ import { FooterComponent } from './footer/footer.component';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  /* providers: [
-    DataService
-  ], */
+  providers: [
+    // DataService,
+    SecretGuardService
+  ],
   bootstrap: [
     AppComponent
   ]
