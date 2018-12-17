@@ -3,7 +3,10 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { IClient } from './portfolio/client/client.component';
+import { Cacheable } from 'ngx-cacheable';
+
+import { IClientObj, IClient } from '../models/client.model';
+import { IExperience } from '../models/experience.model';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +17,16 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getClients(): Observable<any> {
-    return this.http.get('assets/clients.json')
+  @Cacheable()
+  getClients(): Observable<IClientObj> {
+    return this.http.get<IClientObj>('assets/clients.json')
       .pipe(
           catchError(this.handleError)
       );
   }
 
-  getClient(id): Observable<IClient> {
+  @Cacheable()
+  getClient(id: number): Observable<IClient> {
     return this.getClients()
       .pipe(
           map(clientData => {
@@ -31,6 +36,7 @@ export class DataService {
       );
   }
 
+  @Cacheable()
   getTechSkills() {
     return this.http.get<Array<any>>('assets/techSkills.json')
       .pipe(
@@ -38,7 +44,8 @@ export class DataService {
       );
   }
 
-  getTechSkill(skillName) {
+  @Cacheable()
+  getTechSkill(skillName: string) {
     return this.getTechSkills()
       .pipe(
           map(skills => {
@@ -50,8 +57,9 @@ export class DataService {
       );
   }
 
-  getWorkExperience(): Observable<any> {
-    return this.http.get<Array<any>>('assets/workExp.json')
+  @Cacheable()
+  getWorkExperience(): Observable<IExperience[]> {
+    return this.http.get<IExperience[]>('assets/workExp.json')
     .pipe(
       catchError(this.handleError)
     );

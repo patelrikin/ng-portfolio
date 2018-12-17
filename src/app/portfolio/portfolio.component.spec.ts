@@ -2,13 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PortfolioComponent } from './portfolio.component';
 
+import { PortfolioRoutingModule } from './portfolio-routing.module';
+import { ClientComponent } from './client/client.component';
+import { MaterialUIModule } from '../material.module';
+
 describe('PortfolioComponent', () => {
   let component: PortfolioComponent;
   let fixture: ComponentFixture<PortfolioComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortfolioComponent ]
+      imports: [ MaterialUIModule, PortfolioRoutingModule ],
+      declarations: [ PortfolioComponent, ClientComponent ]
     })
     .compileComponents();
   }));

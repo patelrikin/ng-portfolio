@@ -1,4 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+body,html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #FEFAF3;
+  color: #4D6172;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+.m20 {
+  margin: 20px;
+}
 
 .container {
   display: grid;
@@ -9,43 +30,19 @@
   background-color: #f05f40;
 }
 
-body,html {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  // background: #22262a;
-  font-family: Helvetica Neue,arial,sans-serif;
-  font-weight: 400;
-  // color: #fff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box
-}
-
 #app {
   height: 100%
 }
 
 :host { display: contents; }
 
-.footer a,.sidebar a {
-  // color: #fff
-}
-
-.content {
-  background-color: #fefefe;
-  color: #444;
-  padding: 2em .65em
-}
-
-.flash-text {
-  background: #4c4
+.content, .mat-card-content {
+  // background-color: #fefefe;
+  // color: #444;
+  padding: .65em 2em;
+  font-size: 15px;
+  line-height: 26px;
+  color: #4D6172;
 }
 
 ul {
@@ -55,6 +52,24 @@ ul {
 ul li {
   padding: .4em;
   font-weight: 600
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sidebar, .footer {
+  // background: #561296;
+  background: #203140;
+  color: #fff;
+}
+
+.container {
+  min-height: 500px;
+}
+
+.fw5 {
+  font-weight: 500;
 }
 
 @supports (display: grid) {
@@ -116,11 +131,6 @@ ul li {
           grid-area: footer;
           bottom: 0;
           padding: .35em
-      }
-
-      .footer, .sidebar {
-          // position: fixed;
-          // width: 25%
       }
 
       .portfolio.flex-container {
@@ -193,8 +203,8 @@ ul li {
       }
 
       .profile {
-          margin: 0 auto;
-          max-width: 700px;
+          // margin: 0 auto;
+          // max-width: 700px;
           text-align: left
       }
   }
@@ -234,11 +244,4 @@ ul li {
   padding: 56px 20px;
   min-height: 100%;
   width: 100%
-}
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-.m20 {
-  margin: 20px;
 }

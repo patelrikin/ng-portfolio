@@ -1,11 +1,11 @@
 <div class="sidebar">
   <div class="bg-primary wip">
     <h2>Work in progress!</h2>
-    <p>Source code available here: <a href="https://github.com/patelrikin/ng-portfolio" target="_blank">https://github.com/patelrikin/ng-portfolio</a></p>
-    <span>Lighthouse Report available here: <a href="https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://ng-app.patelrikin.com/" target="_blank">Lighthouse Report</a></span>
+    <p>Source code available here: <a href="https://github.com/patelrikin/ng-portfolio" target="_blank" rel="noopener">https://github.com/patelrikin/ng-portfolio</a></p>
+    <span>Lighthouse Report available here: <a href="https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https://ng-app.patelrikin.com/" target="_blank" rel="noopener">Lighthouse Report</a></span>
   </div>
   <header class="header" role="banner">
-    <h1>Rikin Patel</h1>
+    <h1 class="text-center">Rikin Patel</h1>
     <hr />
     <ul class="list-inline li-nav">
       <li>UI Lead</li>
@@ -20,11 +20,12 @@
   </header>
   <nav>
     <ul class="list-inline li-nav">
-      <li><a routerLink="/profile" class="">Profile</a></li>
-      <li><a routerLink="/techskills" class="">Tech Skills</a></li>
-      <li><a routerLink="/workexp" class="">Work Experience</a></li>
-      <li><a routerLink="/portfolio" class="">Portfolio</a></li>
-      <li><a routerLink="/contact" class="">Contact Me</a></li>
+      <li><a routerLinkActive="active" routerLink="/profile" class="">Profile</a></li>
+      <li><a routerLinkActive="active" routerLink="/techskills" class="">Tech Skills</a></li>
+      <li><a routerLinkActive="active" routerLink="/workexp" class="">Work Experience</a></li>
+      <li><a routerLinkActive="active" routerLink="/portfolio" class="">Portfolio</a></li>
+      <li><a routerLinkActive="active" routerLink="/contact" class="">Contact Me</a></li>
+      <li><a routerLinkActive="active" routerLink="/approach">App Approach</a></li>
     </ul>
   </nav>
 </div>

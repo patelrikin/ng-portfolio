@@ -1,0 +1,44 @@
+* {
+  --yellow: #ffc600;
+  --black: #272727;
+}
+
+@supports (display: grid) {
+  @media (min-width:760px) {
+    .about-grid {
+      max-width: 1200px;
+      margin: 20px auto;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: repeat(3, 1fr);
+      align-items: center;
+      // border: 10px solid var(--yellow);
+      justify-content: space-around;
+    /*   grid-template-areas: "linkedin profile"
+                            // "linkedin profile"
+                            "linkedin keyprof"; */
+    }
+
+    .linkedin {
+      // grid-area: "linkedin";
+      grid-column: 1 / 2;
+      grid-row: 1 / -1;
+    }
+
+    .profile {
+      // grid-area: "profile";
+      grid-row: 1 / -2;
+    }
+
+    .keyprof {
+      // grid-area: "keyprof";
+      grid-row: 3 / -1;
+    }
+
+    .profile, .keyprof {
+      grid-column: 2 / -1;
+    }
+
+  }
+}

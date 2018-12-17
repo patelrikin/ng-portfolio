@@ -1,20 +1,43 @@
+a, a:visited {
+  color: #fff;
+}
+
+a.active {
+  color: yellow;
+}
+
 .wip {
   padding: 8px;
-  animation: expand-wip 2s 1;
-  animation-delay: 2s;
+  animation: expand-wip 3s 2;
+  animation-delay: 1s;
 }
 
 @keyframes expand-wip {
   0% {
-    padding: 8px;
     color: #000;
   }
+  25% {
+    color: #fff;
+  }
   50% {
-    padding: 16px;
+    color:  #000;
+  }
+  75% {
     color: #fff;
   }
   100% {
-    padding: 8px;
     color: #000;
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+@media (max-width:760px) {
+  nav ul {
+    flex-direction: column;
   }
 }
