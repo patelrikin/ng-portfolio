@@ -19,9 +19,10 @@ const routes: Routes = [
     component: SecretLinkComponent,
     canActivate: [ SecretGuardService ]
   },
+  { path: 'notfound/:url', component: PageNotFoundComponent },
   { path: 'notfound', component: PageNotFoundComponent },
   { path: '', pathMatch: 'full', redirectTo: '/profile' },
-  { path: '**', pathMatch: 'full', redirectTo: '/profile' } // Catch all
+  { path: '**', pathMatch: 'full', redirectTo: '/profile' } // Catch all for now go to profile
 ];
 
 @NgModule({

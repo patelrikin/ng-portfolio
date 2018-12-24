@@ -14,10 +14,10 @@ export class SecretGuardService implements CanActivate {
     // Do some business logic here, like is authenticated user (using injected service) or do user have valid role
     // Or is route param valid or may be initiate some call here and wait for it to return and
     // then return based on that in which case return signature of this function will become Observable
-    const secretLinkURL = window.location.href;
-    this._router.navigate(['notfound']);
-    console.warn('DEMO of CanActivate Route Guard:', secretLinkURL, 'redirected to', window.location + 'notfound');
+    console.log('Router State', state);
+    const secretLinkURL = state.url;
+    this._router.navigate(['notfound', 'secretlink']);
+    console.warn('DEMO of CanActivate Route Guard:', secretLinkURL, 'redirected to /notfound');
     return false; // Because its secret
   }
-
 }
